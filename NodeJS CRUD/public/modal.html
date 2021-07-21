@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Modal CRUD</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .mt-10 {
+            margin-top: 10 !important;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container  mt-10">
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModalNew">
+        Add Item
+      </button>
+
+      <div class="modal fade" id="myModalNew" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h3>Personal Details</h3>
+              <form method="post" action='/'>
+                  <div class="form-group">
+                    <input type='text' class="form-control" name='firstname' id='firstname' placeholder="Firstname"/>
+                  </div>
+                  <div class="form-group">
+                    <input type='text' class="form-control" name='lastname' id='lastname' placeholder="Lastname"/>
+                  </div>
+                  <div class="form-group">
+                    <input type='email' class="form-control" name='email' id='email' placeholder="Email" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type='text' class="form-control" name='phnNumber' id='phnNumber' placeholder="Phn-number"/>
+                  </div>
+                  <button class="btn btn-success" type='submit'>Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+  </body>
+</html>
